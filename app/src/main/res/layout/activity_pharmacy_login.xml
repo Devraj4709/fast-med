@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/background"
+        android:text="Login"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="25dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/pharmacy_register"
+            />
+        <EditText
+            android:id="@+id/pharmacyLogin_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:padding="20dp"
+            android:hint="Phone "
+            android:textColorHint="@color/grey"
+            android:drawableLeft="@drawable/phone_vector"
+            android:background="@drawable/circular_edit"
+            android:textColor="@color/black"
+            android:inputType="phone"
+
+            />
+        <EditText
+            android:id="@+id/pharmacyLogin_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/password"
+            android:background="@drawable/circular_edit"
+            android:padding="20dp"
+          android:hint="Password"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="textPassword"/>
+        <Button
+            android:id="@+id/pharmacyLogin_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/whitedark"
+            android:text="Login"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

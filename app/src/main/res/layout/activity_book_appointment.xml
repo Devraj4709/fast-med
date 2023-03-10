@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".SignupActivity"
+    android:padding="20sp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+
+    <TextView
+        android:id="@+id/appointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Appointment"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        />
+
+    <EditText
+        android:id="@+id/appointment_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="8sp"
+        android:layout_marginTop="40sp"
+        android:layout_below="@id/appointment"
+        android:textColor="@color/black"
+
+        android:textColorHint="@color/grey"
+        android:background="@drawable/circular_edit"
+        android:backgroundTint="@color/white"
+        android:textSize="15sp"
+        android:inputType="textCapWords"
+        android:hint=" Name"
+
+        tools:ignore="Autofill" />
+
+
+    <EditText
+        android:id="@+id/appointment_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appointment_name"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circular_edit"
+        android:hint="Address"
+        android:inputType="textPersonName"
+        android:padding="15sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:textSize="15sp"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/appointment_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_below="@+id/appointment_address"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circular_edit"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:padding="15sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/appointment_fee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15sp"
+        android:layout_below="@id/appointment_phone"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/grey"
+        android:background="@drawable/circular_edit"
+        android:textSize="15sp"
+        android:inputType="textPersonName"
+        android:hint="Fees" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select date"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Select time"
+            android:layout_weight="1"
+            android:layout_marginStart="150sp"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            style="?android:spinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="button"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="150sp"
+            style="?android:spinnerStyle"
+            android:text="button"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/appointmentbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_signup"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/circular_edit"
+        android:backgroundTint="@color/teal_200"
+        android:text="Register" />
+</LinearLayout>

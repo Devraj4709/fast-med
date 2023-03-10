@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/Register_pharmacy_top_text"
+        android:text="Registration"
+        android:textSize="40sp"
+        android:paddingLeft="20dp"
+        android:background="@color/background"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:orientation="vertical"
+        android:background="@color/whitedark"
+
+        android:layout_below="@+id/Register_pharmacy_top_text">
+    <EditText
+        android:id="@+id/Pharmacy_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:hint="Shop Name"
+        android:textSize="30sp"
+        android:textColorHint="@color/grey"
+        android:padding="10dp"
+        android:background="@drawable/circular_edit"
+        android:layout_marginTop="30sp"
+        android:textColor="@color/black"
+        android:inputType="textPersonName"
+        />
+        <EditText
+            android:id="@+id/Pharmacy_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Shop Number"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textColorHint="@color/grey"
+            android:padding="10dp"
+            android:background="@drawable/circular_edit"
+            android:layout_marginTop="30sp"
+            android:inputType="textPersonName"
+            />
+        <EditText
+            android:id="@+id/Pharmacy_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Shop Address"
+            android:textColorHint="@color/grey"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:background="@drawable/circular_edit"
+            android:layout_marginTop="30sp"
+            android:inputType="textPersonName"
+            />
+        <EditText
+            android:id="@+id/Pharmacy_verificatio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Retail Drug License "
+            android:textSize="30sp"
+            android:textColorHint="@color/grey"
+            android:padding="10dp"
+            android:background="@drawable/circular_edit"
+            android:layout_marginTop="30sp"
+            android:textColor="@color/black"
+            android:inputType="text" />
+        <EditText
+            android:id="@+id/Pharmacy_Password_protect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Password "
+            android:textSize="30sp"
+            android:textColorHint="@color/grey"
+            android:padding="10dp"
+            android:background="@drawable/circular_edit"
+            android:layout_marginTop="30sp"
+            android:textColor="@color/black"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/Pharmacy_register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/circular_edit"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

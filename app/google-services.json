@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "386963137273",
+    "project_id": "devraj-22",
+    "storage_bucket": "devraj-22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386963137273:android:34420972725739b44bb828",
+        "android_client_info": {
+          "package_name": "com.example.dev.devraj_22"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386963137273-ui2heijn499sngp54522n4knd8585utb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASrflwj_xXaqw3n2CYrrirTRVCdqSv25o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386963137273-ui2heijn499sngp54522n4knd8585utb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
