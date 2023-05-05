@@ -18,4 +18,7 @@
     <color name="greenpastle">#77DD77</color>
     <color name="yellowpastle">#FDFD96</color>
     <color name="purplepastle">#C3B1E1</color>
+    <color name="orangedark">#FF8C00</color>
+    <color name="reddark">#00008b</color>
+
 </resources>

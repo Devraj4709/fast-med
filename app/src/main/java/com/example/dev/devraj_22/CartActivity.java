@@ -1,19 +1,29 @@
 package com.example.dev.devraj_22;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Cart extends AppCompatActivity {
+public class CartActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    @SuppressLint("MissingInflatedId")
+
+    RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+    TextView txtTotalAmount;
+    Button nxtbtn;
+
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +44,7 @@ public class Cart extends AppCompatActivity {
                     case R.id.menucart:
                         return true;
                     case R.id.consultancy:
-                        startActivity(new Intent(getApplicationContext(), Consultancy.class));
-                        overridePendingTransition(0,0);
+
                         return true;
                     case R.id.menuaccount:
                         startActivity(new Intent(getApplicationContext(),Account.class));
@@ -47,7 +56,11 @@ public class Cart extends AppCompatActivity {
                 return false;
             }
         });
+
+
+
     }
 
 
-}
+
+    }

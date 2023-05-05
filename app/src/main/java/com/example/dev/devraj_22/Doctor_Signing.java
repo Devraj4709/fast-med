@@ -1,5 +1,8 @@
 package com.example.dev.devraj_22;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,30 +14,30 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.dev.devraj_22.Model.Users;
+import com.example.dev.devraj_22.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Pharmacy_Login extends AppCompatActivity {
+public class Doctor_Signing extends AppCompatActivity {
+
     @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pharmacy_login);
+        setContentView(R.layout.activity_doctor_signin);
 
 
-        Button loginbtn = findViewById(R.id.pharmacyLogin_button);
-        EditText Inputphone= findViewById(R.id.pharmacyLogin_phone);
-        EditText InputPassword= findViewById(R.id.pharmacyLogin_password);
+        TextView signup = findViewById(R.id.dsignup_text_view);
+        Button loginbtn = findViewById(R.id.dlogin_button);
+        EditText Inputphone= findViewById(R.id.dphone_edit_text);
+        EditText InputPassword= findViewById(R.id.dpassword_edit_text) ;
         ProgressDialog loadingBar =new ProgressDialog(this);
-        String parentDbname ="Pharmacy";
-        TextView signuptxt =findViewById(R.id.signup_pharmacy_text_view);
+        String parentDbname ="Users";
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,11 +53,11 @@ public class Pharmacy_Login extends AppCompatActivity {
                 String password=InputPassword.getText().toString();
                 if (TextUtils.isEmpty(phone))
                 {
-                    Toast.makeText(Pharmacy_Login.this, "please enter your phone number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText( Doctor_Signing.this, "please enter your phone number", Toast.LENGTH_SHORT).show();
                 }
                 else if (TextUtils.isEmpty(password))
                 {
-                    Toast.makeText(Pharmacy_Login.this, "please enter your email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText( Doctor_Signing.this, "please enter your password", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     loadingBar.setTitle("Login Account");
@@ -81,30 +84,42 @@ public class Pharmacy_Login extends AppCompatActivity {
                             {
                                 if(usersData.getPassword().equals(password))
                                 {
-                                    Toast.makeText(Pharmacy_Login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText( Doctor_Signing.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                                     loadingBar.dismiss();
-                                    Intent intent = new Intent(Pharmacy_Login.this,Pharmacy_Page.class);
+                                    Intent intent = new Intent( Doctor_Signing.this,Homepage.class);
+
+                                    Prevalent.currentOnlineUser =usersData;
+                                    startActivity(intent);
+                                }
+                                else{
+                                    Toast.makeText( Doctor_Signing.this, "Incorrect Password", Toast.LENGTH_SHORT).show();
+                                    loadingBar.dismiss();
+                                    Intent intent = new Intent( Doctor_Signing.this,MainActivity.class);
                                     startActivity(intent);
                                 }
                             }
                         }
                         else {
-                            Toast.makeText(Pharmacy_Login.this, "Account not found", Toast.LENGTH_SHORT).show();
+                            loadingBar.dismiss();
+                            Toast.makeText( Doctor_Signing.this, "Account not found", Toast.LENGTH_SHORT).show();
+                            loadingBar.dismiss();
+                            Intent intent = new Intent( Doctor_Signing.this,MainActivity.class);
+                            startActivity(intent);
                         }
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
 
+
                     }
                 });
             }
         });
-
-        signuptxt.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Pharmacy_Login.this,Register_Pharmacy.class);
+                Intent intent =new Intent( Doctor_Signing.this,Doctor_signup.class);
                 startActivity(intent);
             }
         });

@@ -1,6 +1,7 @@
 package com.example.dev.devraj_22;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.app.appsearch.StorageInfo;
 import android.content.Intent;
 import android.net.Uri;
@@ -52,7 +53,8 @@ public class Pharmacy_Page extends AppCompatActivity {
         EditText productname = findViewById(R.id.Product_name_page);
         EditText productcontent = findViewById(R.id.Product_content_page);
         EditText productprice = findViewById(R.id.Product_price_page);
-        EditText pharmacyaddress = findViewById(R.id.Pharmacy_address_page);
+        ProgressDialog loadingBar =new ProgressDialog(this);
+
         Button upload =findViewById(R.id.Pharmacy_upload_button);
                uploadImage =findViewById(R.id.uploadimage);
                ProductImageRef = FirebaseStorage.getInstance().getReference().child("Product Images");
@@ -68,6 +70,7 @@ public class Pharmacy_Page extends AppCompatActivity {
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 ValidateProductData();
             }
 
@@ -75,7 +78,7 @@ public class Pharmacy_Page extends AppCompatActivity {
                  Description =productcontent.getText().toString();
                 Pname =productname.getText().toString();
                 Price =productprice.getText().toString();
-                Address=pharmacyaddress.getText().toString();
+
                 if(Imageuri == null){
                     Toast.makeText(Pharmacy_Page.this, "Product image is mandatory......", Toast.LENGTH_SHORT).show();
                 }
@@ -89,7 +92,13 @@ public class Pharmacy_Page extends AppCompatActivity {
                     Toast.makeText(Pharmacy_Page.this, "Product Price is mandatory......", Toast.LENGTH_SHORT).show();
                 }
                 else {
+
+                    loadingBar.setTitle("Uploading medicine");
+                    loadingBar.setMessage("Medicine is being uploaded");
+                    loadingBar.setCanceledOnTouchOutside(false);
+                    loadingBar.show();
                     storeProductInformation();
+
                 }
 
             }
@@ -137,8 +146,10 @@ public class Pharmacy_Page extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Uri> task) {
                         if(task.isSuccessful()){
                             downloadImageUrl =task.getResult().toString();
+
                             Toast.makeText(Pharmacy_Page.this, "got the Product image url succesfully", Toast.LENGTH_SHORT).show();
                             SaveProductInfotoDatabase();
+
                         }
                     }
                 });
@@ -154,7 +165,7 @@ public class Pharmacy_Page extends AppCompatActivity {
         productMap.put("image",downloadImageUrl);
         productMap.put("price",Price);
         productMap.put("pname",Pname);
-        productMap.put("paddress",Address);
+
 
         Productref.child(productRandomKey).updateChildren(productMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -162,6 +173,7 @@ public class Pharmacy_Page extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful())
                         {
+
                             Intent intent =new Intent(Pharmacy_Page.this,Pharmacy_Page.class);
                             startActivity(intent);
                             Toast.makeText(Pharmacy_Page.this, "Product is added successfully", Toast.LENGTH_SHORT).show();

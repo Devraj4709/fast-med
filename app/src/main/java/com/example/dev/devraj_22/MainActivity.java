@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                }
                else if (TextUtils.isEmpty(password))
                {
-                   Toast.makeText(MainActivity.this, "please enter your email", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(MainActivity.this, "please enter your password", Toast.LENGTH_SHORT).show();
                }
                else {
                    loadingBar.setTitle("Login Account");

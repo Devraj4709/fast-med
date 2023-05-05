@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".SignupActivity"
+    tools:context=".Doctor_signup"
     android:padding="20sp"
     android:orientation="vertical"
     android:gravity="center_horizontal">
@@ -29,10 +29,10 @@
             android:background="@color/colorbackground"
             >
             <TextView
-                android:id="@+id/signup"
+                android:id="@+id/dsignup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add new Product"
+                android:text="Sign up"
                 android:textStyle="bold"
 
                 android:textAlignment="center"
@@ -44,29 +44,30 @@
                 android:gravity="center_horizontal"
                 />
 
+            <EditText
+                android:id="@+id/dfirstname_signup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="8sp"
+                android:layout_marginTop="40sp"
+                android:layout_below="@id/dsignup"
+                android:textColor="@color/black"
 
-            <ImageView
-                android:id="@+id/uploadimage"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:padding="25dp"
-                android:src="@drawable/add_photo"
-                android:contentDescription=".pharmacy_page" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add photo"
-                android:textColor="@color/black"/>
-
+                android:textColorHint="@color/grey"
+                android:background="@drawable/circular_edit"
+                android:textSize="15sp"
+                android:inputType="textCapWords"
+                android:hint="First Name"
+                tools:ignore="Autofill" />
 
 
             <EditText
-                android:id="@+id/Product_name_page"
+                android:id="@+id/demail_signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/circular_edit"
-                android:hint="Product name"
+                android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:padding="15sp"
                 android:textColor="@color/black"
@@ -75,20 +76,20 @@
                 android:autofillHints="" />
 
             <EditText
-                android:id="@+id/Product_content_page"
+                android:id="@+id/dsign_phone_1"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/circular_edit"
-                android:hint="Product content"
-                android:inputType="text"
+                android:hint="Phone"
+                android:inputType="phone"
                 android:padding="15sp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/grey"
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/Product_price_page"
+                android:id="@+id/dpassword_signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15sp"
@@ -97,20 +98,45 @@
                 android:textColorHint="@color/grey"
                 android:background="@drawable/circular_edit"
                 android:textSize="15sp"
-                android:inputType="phone"
-                android:hint="Product Price" />
+                android:inputType="textPassword"
+                android:hint="Password" />
 
-            <Button
-                android:id="@+id/Pharmacy_upload_button"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dsignup_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 android:layout_marginTop="16dp"
                 android:background="@drawable/circular_edit"
                 android:backgroundTint="@color/teal_200"
-                android:text="Upload" />
+                android:text="Signup" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="15sp"
+                >
+                <TextView
 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Already have an account"
+
+                    />
+
+                <TextView
+                    android:id="@+id/dsignIn_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign in"
+                    android:textStyle="bold"
+                    android:textColor="@color/teal_700"
+                    />
+
+            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

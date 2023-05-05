@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_choose"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/fastmedtext"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300sp"
+        android:src="@drawable/truckback"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login as "
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="@color/reddark"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+
+        >
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Login_user_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/circular_edit"
+            android:backgroundTint="@color/orangedark"
+            android:layout_marginStart="15dp"
+            android:text="User"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Login_doctor_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/circular_edit"
+            android:backgroundTint="@color/orangedark"
+            android:layout_marginStart="32dp"
+            android:text="Doctor"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Login_pharmacy_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/circular_edit"
+            android:backgroundTint="@color/orangedark"
+            android:layout_marginStart="32dp"
+            android:text="Pharmacy"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

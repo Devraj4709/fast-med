@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -46,7 +45,7 @@ public class Homepage extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.menuhome);
         EditText search =findViewById(R.id.search_page);
         ImageView searchImage = findViewById(R.id.search_img);
-        sidenavigation =findViewById(R.id.navigation_View);
+
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -58,12 +57,11 @@ public class Homepage extends AppCompatActivity {
                     case R.id.menuhome:
                         return true;
                     case R.id.menucart:
-                        startActivity(new Intent(getApplicationContext(),Cart.class));
+                        startActivity(new Intent(getApplicationContext(), CartActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.consultancy:
-                        startActivity(new Intent(getApplicationContext(), Consultancy.class));
-                        overridePendingTransition(0,0);
+
                         return true;
                     case R.id.menuaccount:
                         startActivity(new Intent(getApplicationContext(),Account.class));

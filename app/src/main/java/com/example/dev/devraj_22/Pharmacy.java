@@ -1,5 +1,6 @@
 package com.example.dev.devraj_22;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,12 +38,20 @@ public class Pharmacy extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Products model) {
                 holder.txtproductname.setText(model.getPname());
-                holder.txtproductdescription.setText(model.getDescription());
-                holder.txtproductprice.setText("Price = ₹"+model.getPrice());
-                holder.txtproductname.setText(model.getPname());
-                holder.txtproductaddress.setText(model.getAddress());
+                holder.txtproductdescription.setText("Content: "+model.getDescription());
+                holder.txtproductprice.setText("₹"+model.getPrice()+"/-");
+
 
                 Picasso.get().load(model.getImage()).into(holder.imageView);
+
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent =new Intent(Pharmacy.this,ProductDetailsActivity.class);
+                        intent.putExtra("pid",model.getPid());
+                        startActivity(intent);
+                    }
+                });
             }
 
             @NonNull
@@ -64,6 +74,6 @@ public class Pharmacy extends AppCompatActivity {
         recyclerView =findViewById(R.id.recycleview);
         recyclerView.setHasFixedSize(true);
         layoutManager =new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 }

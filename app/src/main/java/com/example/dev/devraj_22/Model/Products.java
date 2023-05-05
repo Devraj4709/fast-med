@@ -8,7 +8,7 @@ public class Products {
 
     }
 
-    public Products(String pname, String description, String price, String image, String pid, String date, String time, String address) {
+    public Products(String pname, String description, String price, String image, String pid, String date, String time) {
         this.pname = pname;
         this.description = description;
         this.price = price;
@@ -16,16 +16,9 @@ public class Products {
         this.pid = pid;
         this.date = date;
         this.time = time;
-        this.paddress=address;
+
     }
 
-    public String getAddress() {
-        return paddress;
-    }
-
-    public void setAddress(String address) {
-        this.paddress = address;
-    }
 
     public String getPname() {
         return pname;

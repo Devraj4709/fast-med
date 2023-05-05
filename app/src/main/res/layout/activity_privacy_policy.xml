@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Privacy_policy"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+            android:id="@+id/back_privacy_policy"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back_arrow"
+            android:background="@color/background"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="  Privacy Policy "
+            android:textSize="35dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:background="@color/background"
+            />
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Fast Med"
+                android:textSize="30dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Your privacy is important to us. Maintaining your trust and confidence is one of our highest priorities. We ensure secure transactions and strive to take reasonable care in the protection of information we receive during the course of us rendering services."
+                android:textSize="15dp"
+                android:textStyle="normal"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Privacy Policy "
+                android:textSize="35dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

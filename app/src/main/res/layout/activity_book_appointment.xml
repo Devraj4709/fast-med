@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,139 +9,175 @@
     android:padding="20sp"
     android:orientation="vertical"
     android:gravity="center_horizontal">
-
-
-    <TextView
-        android:id="@+id/appointment"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Book Appointment"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textSize="36sp"
-        android:textColor="@color/black"
-        android:gravity="center_horizontal"
-        />
 
-    <EditText
-        android:id="@+id/appointment_name"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:padding="8sp"
-        android:layout_marginTop="40sp"
-        android:layout_below="@id/appointment"
-        android:textColor="@color/black"
-
-        android:textColorHint="@color/grey"
-        android:background="@drawable/circular_edit"
-        android:backgroundTint="@color/white"
-        android:textSize="15sp"
-        android:inputType="textCapWords"
-        android:hint=" Name"
-
-        tools:ignore="Autofill" />
-
-
-    <EditText
-        android:id="@+id/appointment_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/appointment_name"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/circular_edit"
-        android:hint="Address"
-        android:inputType="textPersonName"
-        android:padding="15sp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        android:textSize="15sp"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/appointment_phone"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:layout_below="@+id/appointment_address"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/circular_edit"
-        android:hint="Phone"
-        android:inputType="phone"
-        android:padding="15sp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        android:textSize="15sp" />
-
-    <EditText
-        android:id="@+id/appointment_fee"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15sp"
-        android:layout_below="@id/appointment_phone"
-        android:textColor="@color/black"
-        android:layout_marginTop="20dp"
-        android:textColorHint="@color/grey"
-        android:background="@drawable/circular_edit"
-        android:textSize="15sp"
-        android:inputType="textPersonName"
-        android:hint="Fees" />
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:background="@color/white">
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Select date"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Select time"
-            android:layout_weight="1"
-            android:layout_marginStart="150sp"/>
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@color/colorbackground"
+            >
+            <TextView
+                android:id="@+id/appointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book Appointment"
+                android:textStyle="bold"
+
+                android:textAlignment="center"
+                android:textSize="36sp"
+
+                android:textColor="@color/black"
+
+
+                android:gravity="center_horizontal"
+                />
+
+            <EditText
+                android:id="@+id/appointment_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="8sp"
+                android:layout_marginTop="40sp"
+                android:layout_below="@id/signup"
+                android:textColor="@color/black"
+
+                android:textColorHint="@color/grey"
+                android:background="@drawable/circular_edit"
+                android:textSize="15sp"
+                android:inputType="textCapWords"
+                android:hint="First Name"
+                tools:ignore="Autofill" />
+
+
+            <EditText
+                android:id="@+id/appointment_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circular_edit"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="15sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="15sp"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/appointment_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circular_edit"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:padding="15sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/appointment_fee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/grey"
+                android:background="@drawable/circular_edit"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:hint="Password" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="19/05/23"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15dp"
+                    android:text="05:30"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:layout_marginStart="150sp"/>
 
 
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <Button
-            style="?android:spinnerStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="button"
-            android:textColor="@color/black"
-            android:layout_weight="1"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="150sp"
-            style="?android:spinnerStyle"
-            android:text="button"
-            android:textColor="@color/black"
-            />
+            </LinearLayout>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Select date"
+                    android:textSize="10dp"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/yellowpastle"
+                    android:background="@drawable/circular_edit"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="10dp"
+                    android:text="Select time"
+                    android:textAlignment="center"
+                    android:background="@drawable/circular_edit"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/yellowpastle"
+                    android:layout_marginStart="150sp"/>
 
-    <Button
-        android:id="@+id/appointmentbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password_signup"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/circular_edit"
-        android:backgroundTint="@color/teal_200"
-        android:text="Register" />
+
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/appointmentbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+                android:background="@drawable/circular_edit"
+                android:backgroundTint="@color/teal_200"
+                android:text="Book Appointment" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>
