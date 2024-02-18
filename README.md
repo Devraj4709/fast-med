@@ -1,1 +1,1 @@
-An android application for deliverying medicines at nearby stores 
+An android application for delivering medicines at nearby stores. When u open the app u will asked to give access for the current loctaion and when u search for the medicine it will show you the minimum distance at which the medicine is available.
